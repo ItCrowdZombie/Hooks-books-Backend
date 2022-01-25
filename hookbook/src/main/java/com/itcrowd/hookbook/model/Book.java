@@ -14,7 +14,6 @@ public class Book {
     private int id;
     private String title;
     private String author;
-    private Image img;
     private String description;
     private int price;
 
@@ -43,14 +42,6 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public Image getImg() {
-        return img;
-    }
-
-    public void setImg(Image img) {
-        this.img = img;
     }
 
     public String getDescription() {
