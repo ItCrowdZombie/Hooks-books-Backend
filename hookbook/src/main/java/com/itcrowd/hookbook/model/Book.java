@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.awt.*;
+import java.io.File;
+import java.net.URL;
 
 @Entity
 public class Book {
@@ -16,6 +18,7 @@ public class Book {
     private String author;
     private String description;
     private int price;
+    private URL imageUrl;
 
     public Book() {
     }
@@ -26,6 +29,14 @@ public class Book {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public URL getImageUrl(URL imageUrl) {
+        return imageUrl;
+    }
+
+    public void setImageUrl(URL imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {
