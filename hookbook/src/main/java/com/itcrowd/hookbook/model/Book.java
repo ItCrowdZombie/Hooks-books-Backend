@@ -31,7 +31,7 @@ public class Book {
         this.id = id;
     }
 
-    public URL getImageUrl(URL imageUrl) {
+    public URL getImageUrl() {
         return imageUrl;
     }
 
