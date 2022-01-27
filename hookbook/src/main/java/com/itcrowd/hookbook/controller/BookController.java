@@ -9,15 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/books")
 
 public class BookController {
     @Autowired
     private BookService bookService;
 
-    @PostMapping("/add")
+    @PostMapping()
     public String add(@RequestBody Book book){
         bookService.saveBook(book);
         return "new book added";
     }
+
 }
