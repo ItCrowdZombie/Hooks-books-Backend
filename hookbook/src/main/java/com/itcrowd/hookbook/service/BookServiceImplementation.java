@@ -1,4 +1,19 @@
 package com.itcrowd.hookbook.service;
 
-public class BookServiceImplementation {
+import com.itcrowd.hookbook.model.Book;
+import com.itcrowd.hookbook.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookServiceImplementation  implements BookService{
+
+    @Autowired
+    private BookRepository bookRepository;
+
+    @Override
+    public Book saveBook (Book book){
+        return bookRepository.save(book);
+    }
 }
+
