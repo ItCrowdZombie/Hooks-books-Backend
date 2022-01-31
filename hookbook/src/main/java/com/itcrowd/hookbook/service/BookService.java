@@ -8,4 +8,8 @@ public interface BookService {
 
     public Book saveBook (Book book);
     public List<Book> getAllBooks();
+
+    public Book get(Integer id);
+
+    void delete(Integer id);
 }
