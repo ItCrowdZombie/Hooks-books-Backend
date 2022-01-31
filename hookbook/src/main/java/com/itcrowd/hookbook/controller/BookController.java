@@ -25,10 +25,10 @@ public class BookController {
         return "new book added";
     }
 
-@GetMapping()
+    @GetMapping()
     public List<Book> getAllBooks(){
         return bookService.getAllBooks();
-}
+         }
 
     @GetMapping("/{id}")
     public ResponseEntity<Book> get (@PathVariable Integer id){
@@ -39,6 +39,17 @@ public class BookController {
             return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
         }
 
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Book> update (@RequestBody Book book, @PathVariable Integer id) {
+        try{
+            Book existingBook=bookService.get(id);
+            bookService.saveBook(book);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }catch (NoSuchElementException e){
+            return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
+        }
     }
 
 

@@ -4,9 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Sensitive Data ###
-hookbook/src/main/resources/application.properties
-
 ### STS ###
 .apt_generated
 .classpath
@@ -31,6 +28,7 @@ hookbook/src/main/resources/application.properties
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+hookbook/src/main/resources/application.properties
 
 ### VS Code ###
 .vscode/

@@ -28,6 +28,11 @@ public class BookServiceImplementation  implements BookService{
     public Book get(Integer id){
         return bookRepository.findById(id).get();
     }
+
+    @Override
+    public void delete(Integer id){
+        bookRepository.deleteById(id);
+    }
 }
 
 

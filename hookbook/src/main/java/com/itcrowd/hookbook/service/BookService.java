@@ -10,4 +10,6 @@ public interface BookService {
     public List<Book> getAllBooks();
 
     public Book get(Integer id);
+
+    void delete(Integer id);
 }
