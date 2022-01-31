@@ -23,6 +23,11 @@ public class BookServiceImplementation  implements BookService{
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
+
+    @Override
+    public Book get(Integer id){
+        return bookRepository.findById(id).get();
+    }
 }
 
 
